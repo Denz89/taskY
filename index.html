@@ -1,0 +1,58 @@
+<!doctype html>
+    <html>
+    <head>
+      <meta charset="utf-8"/>
+	  <title>Задание 1</title>
+	  <link href="style.css" rel="stylesheet" type="text/css"/>
+	  <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        $("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        $("#popup1").hide();
+    }
+</script>
+	</head>
+	
+	<body>
+	<main>
+	<header class="b-container">Шапка
+	<button><p><a href="javascript:PopUpShow()">Войти</a></p></button>
+    </header>
+	<content class="row content">Контент
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean 
+	commodo ligula eget dolor. Aenean massa.
+	Cum sociis natoque penatibus et magnis dis parturient montes</p>
+	</content>
+	<aside class="sidebar hidden row">
+		Сайдбар
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+		Aenean commodo ligula eget dolor. Aenean massa. 
+		Cum sociis natoque penatibus et magnis dis parturient montes</p>
+	</aside>
+	<footer class="footer">Футер
+	</footer>
+	</main>
+	
+	<div class="b-popup" id="popup1">
+    <div class="b-popup-content">
+		<form action="handler.php">
+   <p><strong>Логин:</strong> 
+    <input name="login"></p>
+   <p><strong>Пароль:</strong> 
+    <input type="password" name="password"></p>
+	</form>
+    <a href="javascript:PopUpHide()">Закрыть</a>
+    </div>
+</div>
+</body>
+	   
+	   
+<html>
